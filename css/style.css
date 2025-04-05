@@ -13,26 +13,27 @@ body {
 }
 
 header {
-    background-color: rgba(255, 255, 255, 0.8); /* Белый с прозрачностью */
-    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
     text-align: center;
     width: 100%;
     box-sizing: border-box;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 header h1 {
     margin-bottom: 5px;
+    font-size: 1.5em;
 }
 
 header .note {
-    font-size: 1em;
+    font-size: 0.9em;
     font-style: italic;
     color: #555;
 }
 
 header .creation-date {
-    font-size: 0.8em;
+    font-size: 0.7em;
     color: #555;
     margin-bottom: 5px;
 }
@@ -41,16 +42,16 @@ header .creation-date {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    padding: 10px;
     text-align: center;
-    width: 80%;
+    width: 90%;
     max-width: 500px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 #audioTitle {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+    font-size: 1em;
+    margin-bottom: 5px;
     font-weight: bold;
 }
 
@@ -63,7 +64,39 @@ footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     width: 100%;
     margin-top: auto;
+    font-size: 0.8em;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    .player-container {
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    footer {
+        padding: 5px;
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1em;
+    }
 }
