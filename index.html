@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kai22851 Favourite Music</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <p class="creation-date">Дата создания: 03.04.2025</p>
+            <h1>Kai22851 Favourite Music</h1>
+            <p class="note">Примечание: веб-страница работает корректно только на ПК!</p>
+        </div>
+    </header>
+
+    <div class="player-container">
+        <div id="">will.i.am feat. Britney Spears - Scream & Shout</div>
+        <audio controls preload="metadata">
+            <source src="will.i.amFeat.BritneySpears-Scream&Shout.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <div class="player-container">
+        <div>will.i.am - Big and Chunky</div>
+        <audio controls preload="metadata">
+            <source src="will.i.am-BigAndChunky.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <div class="player-container">
+        <div>Gorillaz - Dare</div>
+        <audio controls preload="metadata">
+            <source src="Gorillaz-Dare.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+      <div class="player-container">
+        <div>Alexandra Stan - Mr.Saxobeat</div>
+        <audio controls preload="metadata">
+            <source src="AlexandraStan-MrSaxobeat.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <div class="player-container">
+        <div>Michael Jackson - Bad</div>
+        <audio controls preload="metadata">
+            <source src="MichaelJackson-Bad.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <div class="player-container">
+        <div>Lenny Kravitz - Are You Gonna Go My Way</div>
+        <audio controls preload="metadata">
+            <source src="LennyKravitz-AreYouGonnaGoMyWay.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <div class="player-container">
+        <div>David Guetta feat. Sia - Titanium (feat. Sia)</div>
+        <audio controls preload="metadata">
+            <source src="DavidGuetta-Titanium.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <div class="player-container">
+        <div>Rammstein - Du Hast</div>
+        <audio controls preload="metadata">
+            <source src="Rammstein-DuHast.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <div class="player-container">
+        <div>Lady Gaga - Bad Romance</div>
+        <audio controls preload="metadata">
+            <source src="LadyGaga-BadRomance.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <footer>
+        © 2025 Kai22851. Kai22851 Favourite Music
+        <p>Количество аудиозаписей на странице: <span id="trackCount"></span></p>
+    </footer>
+
+    <script>
+        const audioElements = document.querySelectorAll('audio');
+        const trackCountElement = document.getElementById('trackCount');
+        trackCountElement.textContent = audioElements.length;
+        let currentlyPlaying = null;
+
+        function playTrack(track) {
+            if (currentlyPlaying && currentlyPlaying !== track) {
+                currentlyPlaying.pause();
+                currentlyPlaying.currentTime = 0;
+            }
+
+            track.play();
+            currentlyPlaying = track;
+        }
+
+        audioElements.forEach(audio => {
+            audio.addEventListener('play', function() {
+                if (currentlyPlaying && currentlyPlaying !== this) {
+                  playTrack(this);
+                  currentlyPlaying = this;
+                }
+               else if (currentlyPlaying === null){
+                 playTrack(this);
+                 currentlyPlaying = this;
+               }
+            });
+
+        });
+    </script>
