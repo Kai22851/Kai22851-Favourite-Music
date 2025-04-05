@@ -8,7 +8,7 @@ body {
     font-family: Arial, sans-serif;
     background: url("../images/background.jpg");
     background-repeat: no-repeat;
-    background-size: cover; /* Использовать cover для масштабирования фона */
+    background-size: cover;
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
@@ -34,7 +34,7 @@ header .note {
     font-size: 0.9em;
     font-style: italic;
     color: #555;
-}
+}    
 
 header .creation-date {
     font-size: 0.7em;
@@ -70,11 +70,10 @@ footer {
     text-align: center;
     padding: 5px;
     width: 100%;
-    margin-top: auto;
-    font-size: 0.8em;
     box-sizing: border-box;
 }
 
+/* Media query для телефонов */
 @media (max-width: 768px) {
     body {
         font-size: 14px;
@@ -83,6 +82,7 @@ footer {
     header {
         padding: 5px;
         margin-bottom: 5px;
+        width: 100%; /* Убедитесь, что header занимает 100% ширины */
     }
 
     header h1 {
@@ -98,6 +98,7 @@ footer {
         padding: 5px;
         font-size: 0.7em;
         box-sizing: border-box;
+        width: 100%; /* Убедитесь, что footer занимает 100% ширины */
     }
 }
 
