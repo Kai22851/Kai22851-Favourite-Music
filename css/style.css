@@ -2,7 +2,6 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden; /* Убираем скролл бары */
 }
 
 body {
@@ -14,7 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100vh; /* Важно! Указывает, что body должен быть не меньше высоты экрана */
 }
 
 header {
@@ -72,6 +71,7 @@ footer {
     padding: 5px;
     width: 100%;
     box-sizing: border-box;
+    margin-top: auto; /* Важно!  "Прижимает" футер к низу */
 }
 
 /* Media query для телефонов */
@@ -83,7 +83,7 @@ footer {
     header {
         padding: 5px;
         margin-bottom: 5px;
-        width: 100%; /* Убедитесь, что header занимает 100% ширины */
+        width: 100%;
     }
 
     header h1 {
@@ -99,7 +99,7 @@ footer {
         padding: 5px;
         font-size: 0.7em;
         box-sizing: border-box;
-        width: 100%; /* Убедитесь, что footer занимает 100% ширины */
+        width: 100%;
     }
 }
 
