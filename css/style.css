@@ -2,11 +2,12 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow: hidden; /* Убираем скролл бары */
 }
 
 body {
     font-family: Arial, sans-serif;
-    background: url("../images/background.jpg");
+    background-color: #3d3d45; /* Задаем цвет фона */
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -30,11 +31,6 @@ header h1 {
     font-size: 1.5em;
 }
 
-header .note {
-    font-size: 0.9em;
-    font-style: italic;
-    color: #555;
-}    
 
 header .creation-date {
     font-size: 0.7em;
@@ -73,7 +69,6 @@ footer {
     box-sizing: border-box;
 }
 
-/* Media query для телефонов */
 @media (max-width: 768px) {
     body {
         font-size: 14px;
@@ -82,7 +77,7 @@ footer {
     header {
         padding: 5px;
         margin-bottom: 5px;
-        width: 100%; /* Убедитесь, что header занимает 100% ширины */
+        width: 100%;
     }
 
     header h1 {
@@ -98,7 +93,7 @@ footer {
         padding: 5px;
         font-size: 0.7em;
         box-sizing: border-box;
-        width: 100%; /* Убедитесь, что footer занимает 100% ширины */
+        width: 100%;
     }
 }
 
