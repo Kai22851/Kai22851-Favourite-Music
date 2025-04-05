@@ -1,15 +1,16 @@
-body {
-    font-family: Arial, sans-serif;
-    background: url("../images/background.jpg");
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-attachment: fixed;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light gray background */
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100vh; /* Make sure body is at least the height of the viewport */
 }
 
 header {
@@ -66,11 +67,11 @@ footer {
     text-align: center;
     padding: 5px;
     width: 100%;
-    margin-top: auto;
-    font-size: 0.8em;
     box-sizing: border-box;
+    margin-top: auto;
 }
 
+/* Media query для телефонов */
 @media (max-width: 768px) {
     body {
         font-size: 14px;
@@ -79,6 +80,7 @@ footer {
     header {
         padding: 5px;
         margin-bottom: 5px;
+        width: 100%;
     }
 
     header h1 {
@@ -94,14 +96,12 @@ footer {
         padding: 5px;
         font-size: 0.7em;
         box-sizing: border-box;
+        width: 100%;
     }
-
 }
 
 @media (max-width: 480px) {
-
     header h1 {
         font-size: 1em;
     }
-
 }
